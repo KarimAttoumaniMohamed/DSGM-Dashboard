@@ -158,3 +158,17 @@ if __name__ == "__main__":
     #   python -m src.dsgm.dashboard
     template.servable()
     pn.serve(template, show=True)  # opens a local server
+
+# ... your template definition above ...
+template = pn.template.MaterialTemplate(
+    title="DSGM Dashboard — Inclusive Internet Governance",
+    sidebar=[sidebar],
+    main=[main],
+)
+
+# ✅ This line must be at module level for `panel serve`:
+template.servable()
+
+if __name__ == "__main__":
+    # For `python -m src.dsgm.dashboard`
+    pn.serve(template, show=True)
