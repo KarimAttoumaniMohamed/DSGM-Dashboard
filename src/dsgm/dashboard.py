@@ -1,10 +1,20 @@
+# src/dsgm/dashboard.py
+
 import panel as pn
 import pandas as pd
+
+# Bokeh plotting primitives you use in _plot_timeseries()
 from bokeh.plotting import figure
 from bokeh.models import Span
-from dsgm.model import simulate_with_metrics, add_metrics_to_timeseries
+
+# Robust import so both run modes work:
+#   - panel serve src/dsgm/dashboard.py
+#   - python -m src.dsgm.dashboard
+try:
+    from dsgm.model import simulate_with_metrics, add_metrics_to_timeseries
 except ImportError:
-from .model import simulate_with_metrics, add_metrics_to_timeseries
+    from .model import simulate_with_metrics, add_metrics_to_timeseries
+
 
 pn.extension("tabulator", "plotly")  # plotly optional; tabulator for tables
 
