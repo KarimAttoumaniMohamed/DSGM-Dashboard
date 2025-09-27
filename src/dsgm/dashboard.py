@@ -3,6 +3,8 @@ import pandas as pd
 from bokeh.plotting import figure
 from bokeh.models import Span
 from dsgm.model import simulate_with_metrics, add_metrics_to_timeseries
+except ImportError:
+from .model import simulate_with_metrics, add_metrics_to_timeseries
 
 pn.extension("tabulator", "plotly")  # plotly optional; tabulator for tables
 
