@@ -51,18 +51,18 @@ DSGM-Dashboard/
 ├── requirements.txt
 ├── .github/workflows/ci-cd.yml
 ├── docs/
-│ ├── index.md # English documentation
-│ └── fr/index.md # French documentation
+│   ├── index.md         # English documentation
+│   └── fr/index.md      # French documentation
 ├── notebooks/
-│ ├── 01_Static_Simulation.ipynb
-│ └── 02_Interactive_Dashboard.ipynb
+│   ├── 01_Static_Simulation.ipynb
+│   └── 02_Interactive_Dashboard.ipynb
 ├── src/
-│ └── dsgm/
-│ ├── init.py
-│ ├── model.py # DSGM simulator + metrics
-│ └── dashboard.py # Panel/Bokeh dashboard app
+│   └── dsgm/
+│       ├── __init__.py
+│       ├── model.py      # DSGM simulator + metrics
+│       └── dashboard.py  # Panel/Bokeh dashboard app
 └── data/
-└── sample/ # Example datasets
+    └── sample/           # Example datasets
 
 ---
 
